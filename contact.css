@@ -1,0 +1,666 @@
+body {
+  font-family: 'Raleway', sans-serif;
+    background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: rgba(64, 36, 36, 0.9); /* Slightly transparent white */
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+  }
+
+
+  .close, .gg-menu {
+    display: none;
+  }
+  
+  .jeff {
+    margin-right: 45px;
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+  }
+  
+  /* Header */
+.header {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.5s;
+}
+
+.logo {
+  height: auto;
+  max-height: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-options a {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.options:hover {
+  color: rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  /* margin-left: auto; */
+  padding-right: 40px; /* Adjusted to move buttons more to the right */
+}
+
+.header-buttons .gg-menu {
+  display: none;
+}
+
+.login-button, .buy-button{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* .realName {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(15, 15, 15, 0.7);
+  font-size: 16px;
+} */
+
+.login-button:hover, .buy-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.login-button:active, .buy-button:active {
+  opacity: 0.4;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+  
+  .row {
+    margin-top: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top {
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: grey;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+  }
+  
+  .yap {
+    background-color: rgba(128, 128, 128, .75);
+    padding: 15px;
+    width: 650px;
+    border-radius: 35px;
+    box-shadow: 0px 18px 25px rgba(0, 0, 0, 0.8);
+  }
+  
+  .yap-session {
+    color: rgba(212, 212, 212, 0.75);
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .contact-info {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 300px 100px 300px;
+    column-gap: 40px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .emails {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(128, 128, 128, .75);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+    box-shadow: 30px 25px 50px rgba(0, 0, 0, 0.85);
+  }
+  
+  .top-two {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+  
+  .real-email {
+  color:  rgba(212, 212, 212, 0.75);
+}
+  
+  .Or {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+    border-radius: 50px;
+  }
+  
+  .Or p {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .email-icon {
+    width: 35px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Bottom Section */
+.bottom-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: fixed;
+}
+
+.super-bottom {
+   font-size: 14px;
+   font-weight: bold;
+   color: white;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(204, 204, 204, 0.7);
+}
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .header-options {
+      flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    }
+    
+    
+    @media (max-width: 768px) {
+      .logo {
+        height: 100px;
+        width: 100px;
+      }
+  
+      .top {
+        width: 325px;
+        font-size: 2.5em;
+      }
+  
+      .yap {
+        width: 475px;
+        padding: 15px;
+      }
+  
+      .yap-session {
+        font-size: 22px;
+        line-height: 45px;
+      }
+  
+      .contact-info {
+        padding: 20px;
+        grid-template-columns: 275px 85px 275px;
+        column-gap: 20px;
+      }
+  
+      .emails {
+        padding: 25px;
+      }
+  
+      .top-two {
+        font-size: 40px;
+      }
+  
+      .real-email {
+        font-size: 15.5px;
+      }
+  
+      .email-icon {
+        width: 75px;
+    }
+  
+    .Or p {
+      font-size: 38px;
+    }
+    }
+    
+    @media (max-width: 540px) {
+      .logo {
+        height: 80px;
+        width: 80px;
+      }
+      /* .header-options a {
+        font-size: 20px;
+      }
+      
+      .login-button,
+      .buy-button {
+          padding: 8px 16px;
+          margin-left: 0;
+          font-size: 18px;
+          width: 90px;
+      } */
+  
+      .top {
+        width: 300px;
+        font-size: 2em;
+      }
+  
+      .yap {
+        width: 400px;
+        padding: 15px;
+      }
+  
+      .yap-session {
+        font-size: 20px;
+        line-height: 40px;
+      }
+  
+      .contact-info {
+        padding: 20px;
+        grid-template-columns: 195px 80px 195px;
+        column-gap: 20px;
+      }
+  
+      .emails {
+        padding: 20px;
+      }
+  
+      .top-two {
+        font-size: 30px;
+      }
+  
+      .real-email {
+        font-size: 11px;
+      }
+  
+      .email-icon {
+        width: 50px;
+    }
+  
+    .Or p {
+      font-size: 34px;
+    }
+    }
+    
+    
+    
+    @media (max-width: 480px) {
+      .logo {
+        height: 75px;
+        width: 75px;
+      }
+      /* .header-options a {
+        font-size: 14px;
+      }
+      
+      .login-button,
+      .buy-button {
+          padding: 8px 16px;
+          margin-left: 0;
+          font-size: 14px;
+          width: 80px;
+      } */
+  
+      .top {
+        width: 200px;
+        font-size: 1.5em;
+      }
+  
+      .yap {
+        width: 300px;
+        padding: 10px;
+      }
+  
+      .yap-session {
+        font-size: 18px;
+        line-height: 30px;
+      }
+  
+      .contact-info {
+        padding: 15px;
+        grid-template-columns: 160px 60px 160px;
+        column-gap: 15px;
+      }
+  
+      .emails {
+        padding: 20px;
+      }
+  
+      .top-two {
+        font-size: 24px;
+      }
+  
+      .real-email {
+        font-size: 9px;
+      }
+  
+      .email-icon {
+        width: 40px;
+    }
+  
+    .Or p {
+      font-size: 28px;
+    }
+    }
+    
+    @media (max-width: 400px) {
+      .logo {
+        height: 70px;
+        width: 70px;
+      }
+  
+      /* .header-options a {
+        font-size: 12px;
+      }
+      
+      .login-button,
+      .buy-button {
+          padding: 8px 16px;
+          margin-left: 0;
+          font-size: 12px;
+          width: 70px;
+      } */
+  
+      .top {
+        width: 200px;
+        font-size: 1.5em;
+      }
+  
+      .yap {
+        width: 300px;
+        padding: 10px;
+      }
+  
+      .yap-session {
+        font-size: 18px;
+        line-height: 30px;
+      }
+  
+      .contact-info {
+        padding: 15px;
+        grid-template-columns: 150px 60px 150px;
+        column-gap: 15px;
+      }
+  
+      .emails {
+        padding: 10px;
+      }
+  
+      .top-two {
+        font-size: 24px;
+      }
+  
+      .real-email {
+        font-size: 9px;
+      }
+  
+      .email-icon {
+        width: 40px;
+    }
+  
+    .Or p {
+      font-size: 28px;
+    }
+    }
+    
+    @media (max-width: 375px) {
+      .logo {
+        height: 70px;
+        width: 70px;
+      }
+  
+      /* .header-options a {
+        font-size: 11px;
+      }
+      
+      .login-button,
+      .buy-button {
+          padding: 8px 16px;
+          margin-left: 0;
+          font-size: 12px;
+          width: 70px;
+      } */
+  
+      .top {
+        width: 200px;
+        font-size: 1.5em;
+      }
+  
+      .yap {
+        width: 300px;
+        padding: 10px;
+      }
+  
+      .yap-session {
+        font-size: 18px;
+        line-height: 30px;
+      }
+  
+      .contact-info {
+        padding: 15px;
+        grid-template-columns: 140px 50px 140px;
+        column-gap: 15px;
+      }
+  
+      .emails {
+        padding: 10px;
+      }
+  
+      .top-two {
+        font-size: 20px;
+      }
+  
+      .real-email {
+        font-size: 8px;
+      }
+  
+      .email-icon {
+        width: 30px;
+    }
+  
+    .Or p {
+      font-size: 24px;
+    }
+  
+    .bottom {
+      margin-top: 0px;
+      bottom: 0;
+    }
+    }
+    
+    @media (max-width: 344px) {
+      .logo {
+        height: 70px;
+        width: 70px;
+      }
+  
+      /* .header-options a {
+        font-size: 9.33px;
+      }
+      
+      .login-button,
+      .buy-button {
+          padding: 6px 14px;
+          margin-left: 0;
+          font-size: 10px;
+          width: 60px;
+      } */
+  
+      .top {
+        width: 200px;
+        font-size: 1.5em;
+      }
+  
+      .yap {
+        width: 300px;
+        padding: 10px;
+      }
+  
+      .yap-session {
+        font-size: 18px;
+        line-height: 30px;
+      }
+  
+      .contact-info {
+        padding: 15px;
+        grid-template-columns: 150px 25px 150px;
+        column-gap: 8px;
+      }
+  
+      .emails {
+        padding: 10px;
+      }
+  
+      .top-two {
+        font-size: 20px;
+      }
+  
+      .real-email {
+        font-size: 9px;
+      }
+  
+      .email-icon {
+        width: 25px;
+    }
+  
+    .Or p {
+      font-size: 14px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .login-button, .buy-button{
+      padding: 7px 20px;
+      font-size: 14px;
+    }
+    .header-options {
+      flex-direction: column;
+      margin-left: 0px;
+      padding: 25px;
+    }
+  
+    .header-options a {
+      margin-top: 1.5rem;
+      margin-right: 5px;
+      font-size: 24px;
+    }
+  
+    #nav-links ul li {
+      margin-top: 1.5rem;
+      margin-left: 0px;
+      margin-right: 5px;
+      font-size: 18px;
+    }
+    #nav-links ul {
+      flex-direction: column;
+    }
+  
+    ul {
+      margin-left: 0px;
+      padding: 25px;
+    }
+  
+    #nav-links {
+      position: absolute;
+      background-color: white;
+      height: 100vh;
+      width: 250px;
+      right: -400px;
+      top: 0;
+      text-align: left;
+      align-items: start;
+      z-index: 2;
+      justify-content: start;
+      transition: all 0.45s;
+    }
+  
+    .close {
+      font-size: 36px;
+      margin-top: 10px;
+      top: 0;
+      font-weight: bold;
+      display: block;
+      color: black;
+    }
+  
+    .header-buttons .gg-menu {
+      display: block;
+      margin-left: 10px;
+      color: rgba(49, 37, 32, 0.85);
+    }
+  
+    .header {
+      justify-content: space-between;
+    }
+  
+    .header-buttons {
+      padding-right: 85px;
+    }
+  }

@@ -1,0 +1,147 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(to right, rgba(200, 200, 200, 0.7), rgba(134, 199, 252, 0.7));
+  margin: 0;
+  padding: 0;
+  color: rgba(64, 36, 36, 0.9);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.back {
+  margin-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.back a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: text-decoration 0.15s, opacity 0.15s;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50px
+}
+
+.back a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.back a:active {
+  opacity: 0.3;
+}
+
+.sec {
+  width: 80%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.sec h1 {
+  font-size: 48px;  
+  color: rgb(234, 228, 228);
+}
+
+.sec p {
+  line-height: 35px;
+  font-size: 18px;
+  color: rgb(142, 127, 127);
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.img-row {
+  display: flex;
+  column-gap: 35px;
+}
+
+.img-col {
+  flex-basis: 48%;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.img-col img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  offset-position: center;
+}
+
+.layer h3 {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+.layer {
+height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
+ position: absolute;
+ transition: 0.5s;
+}
+
+.layer:hover {
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+#one {
+color: rgb(234, 72, 14);
+}
+
+.layer:hover h3 {
+  bottom: 35%;
+  left: 15%;
+  top: 0;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .back {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  
+  .sec h1 {
+    font-size: 34px;
+  }
+  
+  .sec p {
+    line-height: 15px;
+    font-size: 15px;
+    color: rgb(142, 127, 127);
+  }
+
+  .img-row {
+    display: flex;
+    flex-direction: column;
+    column-gap: 35px;
+  }
+
+  .layer h3 {
+    font-size: 14px;
+  }
+
+  .layer:hover h3 {
+    left: 20%;
+  }
+}
