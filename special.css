@@ -1,0 +1,245 @@
+body {
+  font-family: 'Georgia', sans-serif;
+  background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+ }
+
+ .back {
+  margin-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.back a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: text-decoration 0.15s, opacity 0.15s;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50px
+}
+
+.back a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.back a:active {
+  opacity: 0.3;
+}
+
+ .main {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+ }
+
+
+ .contain {
+  margin-top: 25px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .one, .two {
+  background-color: rgba(255, 255, 255, .55);
+  transition: all 1s;
+  padding: 5px;
+  border-radius: 15px;
+ }
+
+ .one {
+  animation: fadeIn 2s ease-in-out 1s forwards;
+ }
+
+ .two {
+  animation: fadeIn2 2s ease-in-out 1s forwards;
+}
+
+ .one::before, .two::before {
+  content: "Hover Over Me";
+  color: rgba(30, 30, 30, 0.95);
+  transition: all 0.75s;
+ }
+
+.one:hover:before, .two:hover:before {
+  display: none;
+}
+
+.one p, .two p {
+  opacity: 0;
+  font-size: 5px;
+  transition: 1s;
+}
+
+.one:hover {
+  background-color: white;
+  padding: 20px 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+}
+
+.two:hover {
+  background-color: white;
+  padding: 20px 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+}
+
+.one:hover p, .two:hover p {
+  opacity: 1;
+  font-size: 20px;
+  line-height: 35px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(350px) rotate(-15deg); /* Initial rotation and translation */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20) rotate(5deg); /* Final rotation and translation */
+  }
+}
+
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+    transform: translateY(350px) rotate(15deg); /* Initial rotation and translation */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20) rotate(5deg); /* Final rotation and translation */
+  }
+}
+
+.main h1 {
+  font-size: 48px;
+  background-color: rgba(240, 248, 255, .75);
+  padding: 15px;
+}
+
+.interest {
+  margin-top: 40px;
+}
+
+.interest button {
+  background-color: transparent;
+  border: 5px gray solid;
+  backdrop-filter: blur(10px);
+  padding: 20px 45px;
+  font-size: 24px;
+  color: white;
+  transition: background-color 1s, color 1s, border 1s, opacity, 0.35s;
+}
+
+.interest button:hover {
+  background-color: white;
+  color: #7c8085;
+  border: 2.5px gray solid;
+}
+
+.interest button:active {
+  opacity: 0.5;
+}
+
+
+.end {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  transition: all 1s;
+  flex-direction: column;
+  transform: scale(0);
+}
+
+.endtwo {
+  border: 1px solid grey;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.75);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.end h1 {
+  font-size: 40px;
+  color: rgb(26, 26, 26);
+}
+
+.end p {
+  font-size: 18px;
+  line-height: 35px;
+  color: rgb(247, 247, 247);
+}
+
+.end p span {
+  color: rgb(163, 229, 253);
+}
+
+@media (max-width: 700px) {
+  .back {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .main h1 {
+    font-size: 24px;
+  }  
+
+  .end h1 {
+    font-size: 20px;
+  }
+
+  .end p {
+    font-size: 11px;
+    line-height: 30px;
+  }
+
+  .contain {
+    width: 97.5%;
+  }
+
+  .one, .two {
+    background-color: white;
+    width: 275px;
+    padding: 20px 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.75);  }
+
+  .one::before, .two::before {
+    font-size: 10px;
+  }
+
+  .one:hover, .two:hover {
+    padding: 5px;
+  }
+
+  .one p, .two p {
+    opacity: 1;
+    font-size: 14px;
+  }
+
+  .interest button {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+
+  .one::before, .two::before {
+    content: "";
+  }
+}

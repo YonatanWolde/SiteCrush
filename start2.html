@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPSKSB6EKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPSKSB6EKW');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiteCrush</title>
+    <link rel="stylesheet" href="start.css" /> <!-- Updated CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+  <style>
+    .main-content {
+        transform: translateX(-1500px);
+    }
+  </style>
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="sitecrushlogo.jpeg" alt="SiteCrush Logo" />
+            <nav class="header-options" id="nav-links">
+
+                <span class="close">X</span>               <ul>
+                    <li><a class="options" href="start2.html">Home</a></li>
+                    <li><a class="options" href="about2.html">About</a></li>
+                    <li><a class="options" href="services2.html">Services</a></li>    
+                    <li><a class="options" href="contact2.html">Contact</a></li>           
+                </ul>
+                                   
+            </nav>
+
+            <div class="header-buttons">
+                    <!-- <a href="index.html"><button class="login-button">Login</button></a> -->
+                    <a href="buy2.html"><button class="buy-button">Buy</button></a>
+                    <button class="realName" id="userDisplay"></button>
+                    <i class="gg-menu"></i>
+
+                </div>
+
+            </div>
+
+            <div class="hold">
+                <div class="popUp">
+                 <h1 class="userHolder"></h1>
+                </div>
+            </div>
+
+    <div class="main-content">
+        <div class="welcome-container">
+            <h1 class="welcome">
+                Welcome to the place where your coding desires are fulfilled with passionate code
+            </h1>
+            <a href="example2.html"><button class="example-button">View Examples</button></a>
+        </div>
+    </div>
+
+    <!-- Template Section -->
+    <div class="template-section">
+        <div class="template-item">
+            <h2>We Build Your Website</h2>
+            <p>Our expert team creates stunning and functional websites tailored to your needs.</p>
+        </div>
+        <div class="template-item">
+            <h2>We Are Efficient</h2>
+            <p>Our streamlined processes ensure quick and effective delivery of your project.</p>
+        </div>
+        <div class="template-item">
+            <h2>Grow Online</h2>
+            <p>Boost your online presence and reach a wider audience with our comprehensive services.</p>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <div class="info-item">
+            <h2>24/7 Support</h2>
+            <p>Our dedicated team is available around the clock to assist you with any issues or questions.</p>
+        </div>
+        <div class="info-item">
+            <h2>Custom Solutions</h2>
+            <p>We offer tailored solutions to meet your specific business needs and objectives.</p>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <!-- <div class="bottom-two">
+        <div class="super-bottom">
+            <p class="company-name">@SiteCrush</p>
+        </div>
+    </div> -->
+
+    <!-- Script to display username -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var userName = localStorage.getItem('username');
+            var userDisplay = document.getElementById('userDisplay');
+            if (userName) {
+                userDisplay.innerText = userName;
+            } else {
+                userDisplay.innerText = "Guest";
+            }
+        });
+    </script>
+
+    <script src="start.js"></script> <!-- Updated JavaScript file -->
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="all.js"></script>
+    <script>
+const userHolder = document.querySelector(".userHolder");        
+const popUp = document.querySelector(".popUp");
+const hold = document.querySelector(".hold");
+const main = document.querySelector(".main-content");
+function leave () {
+            hold.classList.add("leave")
+        }
+        function leave2() {
+            hold.style.display = "none"
+        }
+        function re() {
+            main.style.transform = "translateX(0)"
+        }
+        function call(){
+            const username = localStorage.getItem("username"); // Assuming "username" is the key you want
+        if (username) {
+            userHolder.innerText = `Welcome to SiteCrush ${username}`;
+        }     
+        setTimeout(leave, 4500)
+        setTimeout(leave2, 5500)
+        setTimeout(re, 5525)
+
+    }
+
+        call();
+    </script>
+</body>
+
+</html>

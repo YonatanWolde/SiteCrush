@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPSKSB6EKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPSKSB6EKW');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 120px; /* Adjust logo size as needed */
+            height: auto;
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .loading-bar-container {
+            width: 60%;
+            margin: 30px auto; /* Center align and adjust margin as needed */
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background-color: #4CAF50; /* Green color for progress */
+            width: 0;
+            transition: width 0.3s ease-in-out; /* Smooth width transition */
+        }
+
+        .loading-percent {
+            font-size: 18px;
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">
+            <img src="sitecrushlogo.jpeg" alt="SiteCrush Logo">
+        </div>
+        <div class="loading-text">
+            <p>Loading Your Experience</p>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar">
+                <div class="loading-progress" id="loading-progress"></div>
+            </div>
+        </div>
+        <div class="loading-percent" id="loading-percent">0%</div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Simulate loading progress
+            var progress = 0;
+            var interval = setInterval(function() {
+                progress += Math.random() * 10; // Simulate progress increase
+                if (progress >= 100) {
+                    clearInterval(interval); // Stop when progress reaches 100%
+                    window.location.href = "loading.html"; // Redirect to index.html
+                }
+                document.getElementById("loading-progress").style.width = progress + "%";
+                document.getElementById("loading-percent").textContent = Math.round(progress) + "%"; // Update percentage text
+            }, 200); // Adjust interval for smoother animation
+        });
+    </script>
+</body>
+</html>

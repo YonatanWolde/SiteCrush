@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPSKSB6EKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPSKSB6EKW');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiteCrush/Examples</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7582649483584804"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="examples.css" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://unpkg.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' https://images.unsplash.com data:;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self';
+        frame-ancestors 'none';
+        form-action 'self';
+        base-uri 'self';
+        block-all-mixed-content;
+    " />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload" /> -->
+</head>
+
+<body>
+  <div class="back">
+    <a href="start2.html">Back</a>
+  </div>
+  <div class="top">
+    <div class="one">
+      <h1>Make The Most Of <br>Every Website with <br><span class="tspan">SiteCrush</span></h1>
+    </div>
+    <div class="two">
+        <h1>Don't Feel <span class="twospan">Confident</span><span class="question">?</span> <br>Or Not <span class="twospan">Sure</span><span class="question">?</span></h1>
+        <button class="view">View Now</button>
+      </div>
+  </div>
+
+  <section class="sec">
+    <div class="holder">
+
+    <h1>Our Website Examples</h1>
+    <p>View some of our website examples <br>that we have crafted with passionate code.</p>
+    <div class="img-row">
+        <div class="img-col">
+          <img src="login.webp">
+          <div class="layer"><h3 id="three">Login Page</h3></div>
+        </div>
+        <div class="img-col">
+          <img src="abu.webp">
+          <div class="layer"><h3 id="two">Game Design</h3></div>
+        </div>
+    </div>
+    <div class="img-row">
+      <div class="img-col">
+        <img src="number.webp">
+        <div class="layer"><h3 id="one">Game Design</h3></div>
+      </div>
+      <div class="img-col">
+        <img src="buy.webp">
+        <div class="layer"><h3 id="four">Buy Page</h3></div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <script>
+    const one = document.querySelector(".one");
+    const two = document.querySelector(".two");
+    const sec = document.querySelector(".sec");
+
+    function appearTop() {
+      sec.style.display = "block";
+      // sec.style.opacity = "1"
+    }
+
+    function appearTop2() {
+      sec.style.transform = "translateY(-950px)";
+    }
+
+    function disappear() {
+      one.style.display = "none";
+      two.style.display = "none";
+    }
+
+    document.querySelector(".view").addEventListener("click", function () {
+      one.classList.add("move")
+      two.classList.add("move")
+      sec.classList.add("move")
+      setTimeout(disappear, 1500)
+      // setTimeout(appearTop, 3000)
+      // setTimeout(appearTop2, 3005)
+    })
+  </script>
+</body>
+</html>

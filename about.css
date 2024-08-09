@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: rgba(64, 36, 36, 0.9);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.close, .gg-menu {
+  display: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+}
+
+.jeff {
+  margin-right: 45px;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.5s;
+}
+
+.logo {
+  height: auto;
+  max-height: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-options a {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.options:hover {
+  color: rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  padding-right: 40px; /* Adjusted to move buttons more to the right */
+}
+
+.header-buttons .gg-menu {
+  display: none;
+}
+
+.login-button, .buy-button, .realName {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.realName {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(15, 15, 15, 0.7);
+  font-size: 16px;
+}
+
+.login-button:hover, .buy-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.login-button:active, .buy-button:active {
+  opacity: 0.4;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Changed to min-height for better responsiveness */
+  padding-top: 80px; /* To account for the fixed header */
+  text-align: center;
+}
+
+.welcome-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly adjusted opacity */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.welcome {
+  font-size: 22px; /* Reduced font size for smoother appearance */
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6; /* Increased line height for readability */
+  animation: typing 4s steps(30, end) 1; /* Stops after first animation */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Template Section */
+.template-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Improved spacing */
+  padding: 50px 0;
+  background-color: #65a4ff; /* Changed to blue color */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.template-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.template-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.template-item h2 {
+  font-size: 24px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.template-item p {
+  font-size: 18px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Improved spacing */
+  padding: 50px 0;
+  background-color: #fff; /* Changed to white color */
+  border-top: 2px solid #65a4ff; /* Added border top to differentiate sections */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-item h2 {
+  font-size: 24px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.info-item p {
+  font-size: 18px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-options {
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 25px;
+  }
+
+  .header-options a {
+    margin-top: 1.5rem;
+    margin-right: 5px;
+    font-size: 24px;
+  }
+
+  #nav-links ul li {
+    margin-top: 1.5rem;
+    margin-left: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+  #nav-links ul {
+    flex-direction: column;
+  }
+
+  ul {
+    margin-left: 0px;
+    padding: 25px;
+  }
+
+  #nav-links {
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    width: 250px;
+    right: -400px;
+    top: 0;
+    text-align: left;
+    align-items: start;
+    z-index: 2;
+    justify-content: start;
+    transition: all 0.45s;
+  }
+
+  .close {
+    font-size: 36px;
+    margin-top: 10px;
+    top: 0;
+    font-weight: bold;
+    display: block;
+    color: black;
+  }
+
+  .header-buttons .gg-menu {
+    display: block;
+    margin-left: 10px;
+    color: rgba(49, 37, 32, 0.85);
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .header-buttons {
+    padding-right: 85px;
+  }
+
+  .login-button, .buy-button{
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding-top: 100px;
+  }
+
+  .welcome {
+    font-size: 18px; /* Further reduced font size for small screens */
+  }
+
+  .template-item, .info-item {
+    max-width: 100%;
+  }
+}

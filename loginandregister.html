@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPSKSB6EKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPSKSB6EKW');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7582649483584804"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+</head>
+<body>
+  
+       
+
+    
+    <div class="container" id="signup" style="display:none;">
+        <h1 class="form-title">Register</h1>
+        <form method="post" action="">
+            <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="fName" placeholder="First Name" required>
+                <label for="fName">First Name</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="lName" placeholder="Last Name" required>
+                <label for="lName">Last Name</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="rEmail" placeholder="Email" required>
+                <label for="rEmail">Email</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="rPassword" placeholder="Password" required>
+                <label for="rPassword">Password</label>
+                <span class="toggle-password" onclick="togglePassword('rPassword')"><i class="fas fa-eye"></i></span>
+            </div>
+            <button class="btn" id="submitSignUp">Sign Up</button>
+        </form>
+        <div class="links">
+            <p>Already Have Account?</p>
+            <button id="signInButton">Sign In</button>
+        </div>
+    </div>
+
+    <div class="container" id="signIn">
+        <h1 class="form-title">Sign In</h1>
+        <form method="post" action="">
+            <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <label for="password">Password</label>
+                <span class="toggle-password" onclick="togglePassword('password')"><i class="fas fa-eye"></i></span>
+            </div>
+            <p class="recover"><a href="#">Recover Password</a></p>
+            <button class="btn" id="submitSignIn">Sign In</button>
+        </form>
+        <div class="links">
+            <p>Don't have an account yet?</p>
+            <button id="signUpButton">Sign Up</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function togglePassword(id) {
+            const passwordField = document.getElementById(id);
+            const toggleIcon = passwordField.nextElementSibling.firstChild;
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.className = "fas fa-eye-slash";
+            } else {
+                passwordField.type = "password";
+                toggleIcon.className = "fas fa-eye";
+            }
+        }
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var username = document.getElementById('usernameInput').value;
+
+            // Here you should perform your authentication logic.
+            // For the sake of this example, let's assume authentication is successful.
+            var username = "JohnDoe"; // Assuming the username is retrieved after successful authentication
+
+            // Store the username in localStorage
+            localStorage.setItem('username', username);
+
+            // Redirect to start2.html
+            window.location.href = 'start2.html';
+        });
+    </script>
+</body>
+</html>

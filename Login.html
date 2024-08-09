@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPSKSB6EKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPSKSB6EKW');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteCrush/Login</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7582649483584804"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Login.css">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'sha256-BASE64HASH1' 'sha256-BASE64HASH2';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' https://images.unsplash.com data:;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self';
+        frame-ancestors 'none';
+        form-action 'self';
+        base-uri 'self';
+        upgrade-insecure-requests;
+        block-all-mixed-content;
+    " />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload" />
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="email1" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password1" placeholder="Password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="button" onclick="goToLink()">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="loading.html" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Login.js">
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

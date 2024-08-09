@@ -1,0 +1,322 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  width: auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.5s;
+}
+
+.logo {
+  height: auto;
+  max-height: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#nav-links ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.header-options a {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.login-button, .buy-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover, .buy-button:hover {
+  background-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+.login-button:active, .buy-button:active {
+  opacity: 0.4;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.row {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px; /* Increased padding for larger input area */
+  border-radius: 25px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  width: 500px; /* Increased width for larger form */
+  animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  color: black; /* Black color for readability */
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  font-size: 12px;
+  background-color: transparent; /* Removed white background */
+  padding: 0 5px;
+}
+
+.input-container input, .input-container textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #f0f4f8;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.input-container input:focus, .input-container textarea:focus {
+  outline: none;
+  border-color: black;
+}
+
+.input-container input:focus + label,
+.input-container textarea:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container textarea:not(:placeholder-shown) + label {
+  top: -25px;
+  left: 15px;
+  font-size: 12px;
+  color: black;
+}
+
+.contact-form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+  animation: pulse 1.5s infinite;
+}
+
+.contact-form button:active {
+  opacity: 0.7;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  width: 500px; /* Increased width for larger info box */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-heading {
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #f0f4f8;
+  padding: 20px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.contact-heading:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.7);
+}
+
+.contact-info p {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.close, .gg-menu {
+  display: none;
+  }
+
+  .gg-menu {
+    display: none !important;
+  }
+
+@media screen and (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-form, .contact-info {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-heading {
+      font-size: 35px;
+  }
+
+  .contact-info p {
+      font-size: 16px;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(0, 255, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+}
+
+@media (max-width: 768px) {
+  .header-options {
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 25px;
+  }
+
+  .header-options a {
+    margin-top: 1.5rem;
+    margin-right: 5px;
+    font-size: 24px;
+  }
+
+  #nav-links ul li {
+    margin-top: 1.5rem;
+    margin-left: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+  #nav-links ul {
+    flex-direction: column;
+  }
+
+  ul {
+    margin-left: 0px;
+    padding: 25px;
+  }
+
+  #nav-links {
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    width: 250px;
+    right: -400px;
+    top: 0;
+    text-align: left;
+    align-items: start;
+    z-index: 2;
+    justify-content: start;
+    transition: all 0.45s;
+  }
+
+  .close {
+    font-size: 36px;
+    margin-top: 10px;
+    top: 0;
+    font-weight: bold;
+    display: block;
+    color: black;
+  }
+
+  .header-buttons .gg-menu {
+    display: block;
+    margin-left: 10px;
+    color: rgba(49, 37, 32, 0.85);
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .header-buttons {
+    padding-right: 85px;
+  }
+
+  .login-button, .buy-button{
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}
